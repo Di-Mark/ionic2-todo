@@ -15,6 +15,11 @@
  
 <ion-content>
   <ion-list>
-   <ion-item *ngFor="let item of items" (click)="viewItem(item)"> <ion-icon name="attach"></ion-icon> {{item.title}}</ion-item>
+   <ion-list-header>
+    Todo Items
+  </ion-list-header>
+   <ion-item *ngFor="let item of items" > <ion-icon name="attach"></ion-icon> <span (click)="viewItem(item)">{{item.title}}  </span>
+   	 <!-- <button (click)="removeItem(item)" clear item-right><ion-icon name="md-trash" ></ion-icon></button> -->
+   </ion-item>
   </ion-list>
 </ion-content>

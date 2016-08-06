@@ -19,4 +19,14 @@ export class Data {
     let newData = JSON.stringify(data);
     this.storage.set('todos', newData);
   }
+  
+  
+  remove(data){
+    let newData = JSON.stringify(data);
+    this.storage.remove('todos.'+newData);
+  }
+  
+  clearData(){
+    this.storage.clear();
+  }
 }

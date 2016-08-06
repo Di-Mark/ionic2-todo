@@ -43,6 +43,11 @@ export class HomePage {
     this.items.push(item);
     this.dataService.save(this.items);
   }
+  
+  removeItem(item){
+    //this.items.pop(item);
+    this.dataService.remove(this.items);
+  }
  
   viewItem(item){
     this.nav.push(ItemDetailPage, {

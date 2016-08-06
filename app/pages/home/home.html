@@ -1,16 +1,20 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar primary>
     <ion-title>
+    <ion-icon name="home"></ion-icon>
         Home
     </ion-title>
-    <ion-buttons end>
-        <button (click)="addItem()"><icon add></icon>Add Item</button>
+    <ion-buttons end> 
+    
+        <button (click)="addItem()">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Add Item</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
  
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>
+   <ion-item *ngFor="let item of items" (click)="viewItem(item)"> <ion-icon name="attach"></ion-icon> {{item.title}}</ion-item>
   </ion-list>
 </ion-content>
